@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amor Te amo</title>
+    <link rel="stylesheet" type="text/css" href="css/Amor.css">
+</head>
+<body>
+    <header>
+        <h1>Seja bem-vinda, meu amor!</h1>
+    </header>
+
+    <main>
+        <p>
+            Estou fazendo esse site há alguns dias e deu bastante trabalho, 
+            mas por você qualquer esforço se torna leve e fácil de fazer. 
+        </p>
+
+        <p style="margin-top: 20px;">Você verdadeiramente me ama?</p>
+
+        <!-- Botões de interação -->
+        <button class="button" onclick="mostrarResposta(true)">Simm</button>
+        <button class="button" onclick="mostrarResposta(false)">Nãoo</button>
+
+        <!-- Div para exibir a resposta -->
+        <div id="resultado"></div>
+    </main>
+
+    <footer>
+        &copy; 2025 Tema do Amor. Eu e você todos os dias. ❤️
+    </footer>
+
+    <script>
+        // Função para mostrar a resposta com base no clique
+        function mostrarResposta(ama) {
+            const resultado = document.getElementById("resultado");
+            resultado.innerHTML = ''; // Limpa qualquer conteúdo anterior
+
+            if (ama) {
+                // Se o usuário clicar em "Simm"
+                resultado.innerHTML = `
+                    <p>Eu sabia que você me ama! ❤️</p>
+                  <p style="font-size: 1.5em;">
+    Amorzinho hoje fazemos 8 meses juntos, e parece que o tempo voou desde o dia em que te conheci. Cada dia ao seu lado tem sido um aprendizado, uma leveza e, acima de tudo, uma felicidade. Você tem esse jeitinho único de fazer tudo (até de brigar cmg), e vc faz tudo parecer mais leve e mais bonito. Seu sorriso ilumina meus dias, sua voz me acalma, e o nosso amor se completa de um jeito que nem sei explicar.
+    O que construímos até aqui é só o começo de algo muito maior que quero para a gnt, quero estar com você em cada passo, em cada sonho, em cada conquista ate nas pequenas coisas. Muito obrigado por ser minha parceira, minha melhor amiga, e o melhor o amor da minha vidaaaaa.
+    Que venham muitos e muitos meses pela frente, porque eu não trocaria isso por nada nesse mundo. Te amo muito mais do que palavras as palavras que existem no mundo! ❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️
+</p>
+
+                    <img src="img/os dois.png" alt="Nós dois juntos" style="max-width: 100%; height: auto; margin-top: 20px;">
+                `;
+            } else {
+                // Se o usuário clicar em "Nãoo"
+                resultado.innerHTML = `
+                    <p>Não ligo, vamos ficar juntos para sempre mesmo! 💕</p>
+                `;
+            }
+        }
+    </script>
+</body>
+</html>
